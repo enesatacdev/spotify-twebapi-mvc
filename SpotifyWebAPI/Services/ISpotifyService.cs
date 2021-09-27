@@ -8,6 +8,8 @@ namespace SpotifyWebAPI.Services
 {
     public interface ISpotifyService
     {
-        Task<IEnumerable<Release>> GetNewReleases(string code, int limit, string token); 
+        Task<IEnumerable<Release>> GetNewReleases(string code, int limit, string token);
+
+        Task<IEnumerable<Search>> Search(string query, string type, string market, int limit, string token);
     }
 }

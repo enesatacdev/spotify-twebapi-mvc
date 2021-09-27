@@ -26,9 +26,11 @@ namespace SpotifyWebAPI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var newReleases = await GetReleases();
+            ViewModel viewModel = new ViewModel();
+            viewModel.GetReleases = GetReleases();
+            viewModel.Search = GetSearch();
 
-            return View(newReleases);
+            return View(viewModel);
         }
 
         private async Task<IEnumerable<Release>> GetReleases()
@@ -48,6 +50,23 @@ namespace SpotifyWebAPI.Controllers
                 Debug.Write(ex);
 
                 return Enumerable.Empty<Release>();
+            }
+        }
+
+        private async Task<IEnumerable<Search>> GetSearch()
+        {
+            try
+            {
+                var token = await _spotifyAccountService.GetToken(_configuration["Spotify:ClientId"], _configuration["Spotify:ClientSecret"]);
+
+                var search = await _spotifyService.Search("ruh","track","tr",2,token);
+
+                return search;
+            }
+            catch(Exception ex)
+            {
+                Debug.Write(ex);
+                return Enumerable.Empty<Search>();
             }
         }
         public IActionResult Privacy()

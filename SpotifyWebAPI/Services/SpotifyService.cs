@@ -36,5 +36,25 @@ namespace SpotifyWebAPI.Services
 
             });
         }
+
+        public async Task<IEnumerable<Search>> Search(string query, string type, string market, int limit,string token)
+        {
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var response = await _httpClient.GetAsync($"search?q={query}&type={type}&market={market}&limit={limit}");
+            response.EnsureSuccessStatusCode();
+
+            using var responseStream = await response.Content.ReadAsStreamAsync();
+            var responseObject = await JsonSerializer.DeserializeAsync<SearchResult.Root>(responseStream);
+
+
+            return responseObject?.tracks?.items?.Select(x=> new Search
+            {
+                Name = x.album.name,
+                Image = x.album.images.Select(y=> y.url).FirstOrDefault(),
+                Artists = String.Join(",", x.album.artists.Select(y=> y.name)),
+                Link = x.album.external_urls.spotify,
+                ReleaseDate = x.album.release_date
+            });
+        }
     }
 }
