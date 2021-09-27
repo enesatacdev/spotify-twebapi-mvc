@@ -5,3 +5,8 @@ Spotify WEB API
 - [ ] Search artists by name
 - [ ] Search user by name
 - [ ] Search genres
+
+
+
+TODO
+- [ ] Make this into a c# library that people can use.
