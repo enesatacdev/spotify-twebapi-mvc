@@ -21,13 +21,13 @@ using SpotifyWebAPI;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\Views\_ViewImports.cshtml"
-using SpotifyWebAPI.Models;
+using SpotifyWebAPI.Service.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c18c5155c770e622132161904eb13a6eba163506", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d5057c613f1428b2d56f141f19596c98491a5311", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

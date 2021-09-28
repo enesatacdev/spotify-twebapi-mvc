@@ -24,7 +24,6 @@ C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\SpotifyWebAPI
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\SpotifyWebAPI.TagHelpers.output.cache
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\SpotifyWebAPI.RazorCoreGenerate.cache
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -38,3 +37,8 @@ C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\ref\SpotifyWe
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\SpotifyWebAPI.pdb
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\SpotifyWebAPI.genruntimeconfig.cache
 C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\SpotifyWebAPI.csproj.CopyComplete
+C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\bin\Debug\net5.0\SpotifyWebAPI.Service.dll
+C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\bin\Debug\net5.0\SpotifyWebAPI.Service.pdb
+C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Artist\Index.cshtml.g.cs
+C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Song\Index.cshtml.g.cs
+C:\Users\User\Desktop\SpotifyWebAPI\SpotifyWebAPI\obj\Debug\net5.0\Razor\Views\Release\Index.cshtml.g.cs

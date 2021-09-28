@@ -1,0 +1,19 @@
+﻿@model ViewModel
+
+<div class="row">
+    @if (Model.GetReleases.Result.Count() > 0)
+    {
+        @foreach (var item in Model.GetReleases.Result)
+        {
+            <div class="col-md-3" style="height:600px">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Artists)</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@Html.DisplayFor(modelItem => item.Name)</h6>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Date)</p>
+                    <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" style="width:100%" alt="Resim" />
+                    <a href="@Html.DisplayFor(modelItem => item.Link)" target="_blank">Hemen Dinle</a>
+                </div>
+            </div>
+        }
+    }
+</div>

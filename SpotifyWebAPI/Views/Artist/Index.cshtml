@@ -1,0 +1,33 @@
+﻿@model ViewModel
+
+
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm("Index", "Artist"))
+            {
+                @Html.TextBox("txtArtist")
+                <input type="submit" value="Ara" />
+            }
+        </div>
+
+        @if (Model.SearchArtist != null)
+        {
+            @foreach (var searchResult in Model.SearchArtist.Result)
+            {
+                @if (searchResult.Followers > 50000)
+                {
+                    <div class="col-md-4" style="height:600px">
+                        <div class="card-body">
+                            <h4 class="card-title">Şarkıcı Adı : @Html.DisplayFor(x => searchResult.Name)</h4>
+                            <h5>Tür : @Html.DisplayFor(x => searchResult.Genres)</h5>
+                            <h6>Takipçi Sayısı : @Html.DisplayFor(x => searchResult.Followers)</h6>
+                            <a href="@Html.DisplayFor(x=> searchResult.Link)">Sanatçıya Git</a>
+                            <img style="width:100%;height:auto" src="@Html.DisplayFor(x => searchResult.Image)" />
+                        </div>
+                    </div>
+                }
+            }
+        }
+
+
+    </div>

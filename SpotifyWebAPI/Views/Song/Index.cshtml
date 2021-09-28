@@ -1,0 +1,32 @@
+﻿@model ViewModel
+
+<div class="row">
+
+    <div class="col-md-12">
+        @using (Html.BeginForm("Index", "Song"))
+        {
+            @Html.TextBox("txtSong")
+            <input type="submit" value="Ara" />
+        }
+    </div>
+    @if (Model.Search != null)
+    {
+        @if (Model.Search.Result.Count() > 0)
+        {
+            @foreach (var searchResult in Model.Search.Result)
+            {
+                <div class="col-md-3" style="height:600px">
+                    <div class="card-body">
+                        <h4 class="card-title">Şarkı Adı : @Html.DisplayFor(x => searchResult.Name)</h4>
+                        <h5>Sanatçılar : @Html.DisplayFor(x => searchResult.Artists)</h5>
+                        <h6>Çıkış Tarihi : @Html.DisplayFor(x => searchResult.ReleaseDate)</h6>
+                        <a href="@Html.DisplayFor(x=> searchResult.Link)">Hemen Dinle</a>
+                        <img style="width:100%;height:auto" src="@Html.DisplayFor(x => searchResult.Image)" />
+                    </div>
+                </div>
+            }
+        }
+    }
+
+
+</div>
